@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Grid</title>
-    <style>
-        .on{
-            background: black;
-            color: cadetblue;
-            font-style: italic;
-
-        }       
-        .content{
-            display: grid;
-            grid-template-columns: repeat(10,1fr);
-            grid-template-rows: repeat(10,1fr);
-            gap: 5px;
-        }
-        div{
-            padding: 10px;
-            text-align: center;
-            border-style: solid;
-            font-size: 1em;
-        }
-    </style>
+    <title>Animated Style Application</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <button onclick="move()">MOVE</button>
@@ -127,29 +109,6 @@
         <div id="n99">99</div>
         <div id="n100">100</div>
     </main>
-    <script>
-        function on() {
-          const square = 'n' + number;
-          const element = document.getElementById(square);
-          element.classList.toggle('on');
-        }
-        function off() {
-          const previous = 'n' + (number - 1);
-          const element = document.getElementById(previous);
-          element.classList.toggle('on');
-        }
-        let number = 1
-        function move() {
-          setTimeout(() => {
-            on();
-            if (number > 1) {
-                off();
-            }
-            number +=1;
-            move();
-        }, 500);
-      }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
